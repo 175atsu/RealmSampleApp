@@ -15,9 +15,12 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val mRealm: Realm by lazy {
-        Realm.getDefaultInstance()
-    }
+//    private val mRealm: Realm by lazy {
+//        Realm.getDefaultInstance()
+//    }
+
+    val realm = Realm.init(this)
+    val mRealm = Realm.getDefaultInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
